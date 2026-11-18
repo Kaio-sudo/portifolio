@@ -4,27 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaio-dev</title>
+    <title>Kaio Henrique - portifólio</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
-<body>
+<body id="top">
 
+    <!-- NavBar (navegação do site) -->
     <header>
-        <h1>Kaio Henrique</h1>
+        <h1 class="name">
+            <a href="#top">
+                <span class="code-symbol" aria-hidden="true">&lt;/&gt;</span>
+                Kaio Henrique
+            </a>
+        </h1>
         <nav>
             <ul class="navegacao-principal">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Resume</a></li>
                 <li><a href="#">Portifolio</a></li>
-                <li><a href="#">Pricing</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- apresentação de quem sou eu  -->
+    <main id="home" class="apresentacao">
+        <div class="apresentacao-conteudo">
+            <span class="apresentacao-etiqueta">quem sou eu?</span>
+            <h2>Transformando ideias em experiências digitais.</h2>
+
+            <p class="apresentacao-destaque">
+                Sou <strong>Kaio Henrique</strong>, estudante de
+                <strong>Análise e Desenvolvimento de Sistemas</strong> no SENAC e desenvolvedor em formação,
+                apaixonado por tecnologia e pela criação de soluções eficientes.
+            </p>
+
+            <p>
+                Tenho como principal objetivo evoluir na área de desenvolvimento web, criando interfaces modernas,
+                responsivas e intuitivas, sempre com atenção à experiência do usuário.
+            </p>
+
+            <p>
+                Atualmente, aprofundo meus conhecimentos em
+                <strong>HTML, CSS, JavaScript e Python</strong>, transformando aprendizado em projetos práticos
+                que fortalecem minhas habilidades técnicas e meu raciocínio como desenvolvedor.
+            </p>
+
+            <p>
+                Este portfólio representa minha trajetória, meus principais conhecimentos e a dedicação que aplico
+                em cada etapa do meu crescimento profissional na área de tecnologia.
+            </p>
+
+            <div class="tecnologias" aria-label="Tecnologias">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>GIT</span>
+                <span>GitHub</span>
+            </div>
+        </div>
+    </main>
 </body>
-<link rel="stylesheet" href="js/script.js">
 
 </html>
