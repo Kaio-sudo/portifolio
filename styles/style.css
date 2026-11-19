@@ -225,6 +225,265 @@ header nav ul li a:focus-visible {
     font-weight: 500;
 }
 
+.resume {
+    scroll-margin-top: 80px;
+    padding: 104px 8% 112px;
+}
+
+.resume-container {
+    width: min(100%, 1120px);
+    margin: 0 auto;
+}
+
+.resume-cabecalho {
+    max-width: 720px;
+    margin-bottom: 76px;
+    animation: resume-entrada 0.7s ease both;
+}
+
+.resume-etiqueta {
+    color: #10e002;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.resume-cabecalho h2 {
+    margin: 12px 0 14px;
+    color: #fff;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(2.6rem, 6vw, 4.5rem);
+    line-height: 1;
+}
+
+.resume-cabecalho h2 span {
+    color: #10e002;
+}
+
+.resume-cabecalho p,
+.resume-detalhe {
+    color: #a7aaa7;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+.resume-bloco {
+    margin-top: 64px;
+    animation: resume-entrada 0.7s ease both;
+}
+
+.resume-bloco:nth-of-type(2) {
+    animation-delay: 0.08s;
+}
+
+.resume-bloco:nth-of-type(3) {
+    animation-delay: 0.16s;
+}
+
+.resume-bloco:nth-of-type(4) {
+    animation-delay: 0.24s;
+}
+
+.resume-bloco:nth-of-type(5) {
+    animation-delay: 0.32s;
+}
+
+.resume-titulo-bloco {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.resume-indice {
+    color: #10e002;
+    font-family: "Sora", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.resume-titulo-bloco h3 {
+    margin: 0;
+    color: #f5f5f5;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+}
+
+.resume-resumo {
+    max-width: 850px;
+    padding: 24px 28px;
+    border-left: 2px solid #10e002;
+    border-radius: 0 14px 14px 0;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.resume-resumo p {
+    margin: 0;
+    color: #c1c4c1;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.resume-resumo strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.resume-grade {
+    display: grid;
+    gap: 16px;
+}
+
+.resume-grade-formacao {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.resume-grade-cursos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.resume-card,
+.resume-habilidade {
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018));
+    transition: border-color 0.25s ease, transform 0.25s ease, background-color 0.25s ease;
+}
+
+.resume-card:hover,
+.resume-habilidade:hover {
+    transform: translateY(-3px);
+    border-color: rgba(16, 224, 2, 0.42);
+}
+
+.resume-status,
+.resume-curso-marca {
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
+    color: #10e002;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.resume-status::before {
+    width: 7px;
+    height: 7px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #10e002;
+    box-shadow: 0 0 10px rgba(16, 224, 2, 0.6);
+    content: "";
+}
+
+.resume-status-concluido {
+    color: #c1c4c1;
+}
+
+.resume-status-concluido::before {
+    background: #727772;
+    box-shadow: none;
+}
+
+.resume-card h4,
+.resume-habilidade h4 {
+    margin: 14px 0 8px;
+    color: #f5f5f5;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.resume-instituicao {
+    margin: 0;
+    color: #10e002;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.resume-card .resume-detalhe {
+    margin: 10px 0 0;
+    font-size: 0.83rem;
+}
+
+.resume-card-futuro {
+    border-style: dashed;
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.resume-futuro-simbolo {
+    display: inline-grid;
+    width: 26px;
+    height: 26px;
+    place-items: center;
+    border: 1px solid rgba(16, 224, 2, 0.4);
+    border-radius: 50%;
+    color: #10e002;
+    font-family: "Poppins", sans-serif;
+}
+
+.resume-curso-marca {
+    padding: 3px 10px;
+    border: 1px solid rgba(16, 224, 2, 0.25);
+    border-radius: 999px;
+    background: rgba(16, 224, 2, 0.06);
+}
+
+.resume-card-curso h4 {
+    min-height: 3em;
+    margin-top: 18px;
+}
+
+.resume-grade-habilidades {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.resume-habilidade h4 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.resume-habilidade ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.resume-habilidade li {
+    padding: 7px 11px;
+    border: 1px solid rgba(16, 224, 2, 0.25);
+    border-radius: 999px;
+    color: #d3d6d3;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.78rem;
+}
+
+@keyframes resume-entrada {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 900px) {
     .apresentacao {
         flex-direction: column;
@@ -240,6 +499,14 @@ header nav ul li a:focus-visible {
         align-self: center;
         flex-basis: auto;
         width: min(100%, 340px);
+    }
+
+    .resume-grade-formacao {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .resume-card-futuro {
+        grid-column: 1 / -1;
     }
 }
 
@@ -264,10 +531,56 @@ header nav ul li a:focus-visible {
     .apresentacao-foto {
         width: min(100%, 320px);
     }
+
+    .resume {
+        padding: 76px 24px 84px;
+    }
+
+    .resume-cabecalho {
+        margin-bottom: 56px;
+    }
+
+    .resume-bloco {
+        margin-top: 48px;
+    }
+
+    .resume-grade-formacao,
+    .resume-grade-cursos,
+    .resume-grade-habilidades {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-card-futuro {
+        grid-column: auto;
+    }
+
+    .resume-card-curso h4 {
+        min-height: 0;
+    }
+
+    .resume-resumo,
+    .resume-card,
+    .resume-habilidade {
+        padding: 20px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     .apresentacao-foto img {
+        transition: none;
+    }
+
+    .resume-cabecalho,
+    .resume-bloco {
+        animation: none;
+    }
+
+    .resume-card,
+    .resume-habilidade {
         transition: none;
     }
 }
