@@ -20,6 +20,8 @@ O portfólio também funciona como uma forma de demonstrar minha evolução como
 - Exibição de habilidades e conhecimentos técnicos.
 - Galeria de projetos desenvolvidos.
 - Informações de contato e redes profissionais.
+- Footer responsivo com navegação, e-mail e links para redes profissionais.
+- Animações de entrada e revelação ao rolar a página, respeitando movimento reduzido.
 
 ## Como executar
 

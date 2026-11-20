@@ -12,6 +12,8 @@
 
 <body id="top">
 
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
     <!-- Home -->
 
     <!-- NavBar (navegação do site) -->
@@ -41,7 +43,7 @@
 
     <!-- apresentação de quem sou eu  -->
     <main id="home" class="apresentacao">
-        <div class="apresentacao-conteudo">
+        <div class="apresentacao-conteudo" data-reveal>
             <span class="apresentacao-etiqueta">quem sou eu?</span>
             <h2>Transformando ideias em experiências digitais.</h2>
 
@@ -68,7 +70,7 @@
             </p>
 
         </div>
-        <figure class="apresentacao-foto">
+        <figure class="apresentacao-foto" data-reveal>
             <img src="imgs/eu.jpeg" alt="Kaio Henrique, estudante de Análise e Desenvolvimento de Sistemas">
             <figcaption>Estudante de ADS · SENAC DF</figcaption>
         </figure>
@@ -77,13 +79,13 @@
     <!-- Resume -->
     <section id="resume" class="resume" aria-labelledby="resume-titulo">
         <div class="resume-container">
-            <div class="resume-cabecalho">
+            <div class="resume-cabecalho" data-reveal>
                 <span class="resume-etiqueta">trajetória profissional</span>
                 <h2 id="resume-titulo">Resume<span>.</span></h2>
                 <p>Formação, cursos e habilidades que fazem parte da minha jornada em tecnologia.</p>
             </div>
 
-            <section class="resume-bloco" aria-labelledby="resumo-titulo">
+            <section class="resume-bloco" data-reveal aria-labelledby="resumo-titulo">
                 <div class="resume-titulo-bloco">
                     <span class="resume-indice" aria-hidden="true">01</span>
                     <h3 id="resumo-titulo">Resumo profissional</h3>
@@ -98,7 +100,7 @@
                 </div>
             </section>
 
-            <section class="resume-bloco" aria-labelledby="formacao-titulo">
+            <section class="resume-bloco" data-reveal aria-labelledby="formacao-titulo">
                 <div class="resume-titulo-bloco">
                     <span class="resume-indice" aria-hidden="true">02</span>
                     <h3 id="formacao-titulo">Formação acadêmica</h3>
@@ -124,7 +126,7 @@
                 </div>
             </section>
 
-            <section class="resume-bloco" aria-labelledby="cursos-titulo">
+            <section class="resume-bloco" data-reveal aria-labelledby="cursos-titulo">
                 <div class="resume-titulo-bloco">
                     <span class="resume-indice" aria-hidden="true">03</span>
                     <h3 id="cursos-titulo">Certificações e cursos</h3>
@@ -148,7 +150,7 @@
                 </div>
             </section>
 
-            <section class="resume-bloco" aria-labelledby="habilidades-titulo">
+            <section class="resume-bloco" data-reveal aria-labelledby="habilidades-titulo">
                 <div class="resume-titulo-bloco">
                     <span class="resume-indice" aria-hidden="true">04</span>
                     <h3 id="habilidades-titulo">Habilidades técnicas</h3>
@@ -435,7 +437,8 @@
                 </div>
             </section>
 
-            <section class="portfolio-bloco portfolio-tecnologias-bloco" aria-labelledby="portfolio-tecnologias-titulo">
+            <section class="portfolio-bloco portfolio-tecnologias-bloco" data-reveal
+                aria-labelledby="portfolio-tecnologias-titulo">
                 <div class="portfolio-titulo-bloco">
                     <span class="portfolio-indice" aria-hidden="true">03</span>
                     <h3 id="portfolio-tecnologias-titulo">Tecnologias utilizadas</h3>
@@ -467,7 +470,7 @@
     <section id="contact" class="contact" aria-labelledby="contact-titulo">
         <div class="contact-container">
             <div class="contact-layout">
-                <div class="contact-informacoes">
+                <div class="contact-informacoes" data-reveal>
                     <div class="contact-cabecalho">
                         <span class="contact-etiqueta"><span>05</span> Contato</span>
                         <h2 id="contact-titulo">Vamos conversar?</h2>
@@ -525,7 +528,8 @@
                     </div>
                 </div>
 
-                <form id="contact-form" class="contact-form" novalidate aria-labelledby="contact-form-titulo">
+                <form id="contact-form" class="contact-form" data-reveal novalidate
+                    aria-labelledby="contact-form-titulo">
                     <span class="contact-form-etiqueta">Vamos tirar sua ideia do papel?</span>
                     <h3 id="contact-form-titulo">Envie uma mensagem</h3>
                     <p id="contact-form-instrucoes" class="contact-form-instrucoes">
@@ -557,7 +561,7 @@
                 </form>
             </div>
 
-            <section class="contact-oportunidades" aria-labelledby="contact-oportunidades-titulo">
+            <section class="contact-oportunidades" data-reveal aria-labelledby="contact-oportunidades-titulo">
                 <span class="contact-oportunidades-etiqueta">Disponibilidade profissional</span>
                 <h3 id="contact-oportunidades-titulo">Aberto a oportunidades!</h3>
                 <p>
@@ -567,6 +571,47 @@
             </section>
         </div>
     </section>
+
+    <footer id="footer" class="site-footer portfolio-revelar" aria-labelledby="footer-nome">
+        <div class="site-footer-container">
+            <div class="site-footer-apresentacao">
+                <a class="site-footer-nome" href="#top" id="footer-nome">Kaio Soares<span>.</span></a>
+                <p>Desenvolvedor em formação, apaixonado por tecnologia e desenvolvimento de soluções.</p>
+            </div>
+
+            <nav class="site-footer-navegacao" aria-label="Navegação do rodapé">
+                <h2>Navegue</h2>
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-footer-contato">
+                <h2>Vamos nos conectar</h2>
+                <a class="site-footer-email" href="mailto:kh0658027@gmail.com">kh0658027@gmail.com</a>
+                <div class="site-footer-redes" role="group" aria-label="Redes profissionais">
+                    <a href="https://github.com/Kaio-sudo" target="_blank" rel="noopener noreferrer"
+                        aria-label="Abrir perfil de Kaio Soares no GitHub em uma nova guia">
+                        <img src="imgs/tecnologias/github-icon.png" alt="" loading="lazy">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kaio-soares-722716365/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Abrir perfil de Kaio Soares no LinkedIn em uma nova guia">
+                        <img src="imgs/tecnologias/linkedin.png" alt="" loading="lazy">
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-footer-base">
+            <p>&copy; <span id="footer-year"></span> Kaio Soares. Todos os direitos reservados.</p>
+            <a href="#top">Voltar ao início</a>
+        </div>
+    </footer>
 
 </body>
 

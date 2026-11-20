@@ -2,6 +2,14 @@ const header = document.querySelector("header");
 const themeToggle = document.querySelector("#theme-toggle");
 const themeToggleLabel = document.querySelector("#theme-toggle-label");
 const themeToggleIcon = document.querySelector("#theme-toggle-icon");
+const footerYear = document.querySelector("#footer-year");
+const scrollProgress = document.querySelector("#scroll-progress");
+
+if (footerYear) {
+    footerYear.textContent = String(new Date().getFullYear());
+}
+
+const prefereMovimentoReduzido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (themeToggle instanceof HTMLButtonElement) {
     let savedTheme = null;
@@ -52,11 +60,33 @@ function atualizarNavbar() {
 window.addEventListener("scroll", atualizarNavbar, { passive: true });
 atualizarNavbar();
 
-const portfolioElementos = document.querySelectorAll(".portfolio-revelar");
-const prefereMovimentoReduzido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let scrollFrame = 0;
 
-if (portfolioElementos.length > 0 && !prefereMovimentoReduzido && "IntersectionObserver" in window) {
-    const portfolioObserver = new IntersectionObserver((entradas, observer) => {
+function atualizarProgressoRolagem() {
+    if (scrollFrame) {
+        return;
+    }
+
+    scrollFrame = window.requestAnimationFrame(() => {
+        const alturaRolavel = document.documentElement.scrollHeight - window.innerHeight;
+        const progresso = alturaRolavel > 0 ? Math.min(window.scrollY / alturaRolavel, 1) : 0;
+
+        if (scrollProgress instanceof HTMLElement) {
+            scrollProgress.style.transform = `scaleX(${progresso})`;
+        }
+
+        scrollFrame = 0;
+    });
+}
+
+window.addEventListener("scroll", atualizarProgressoRolagem, { passive: true });
+window.addEventListener("resize", atualizarProgressoRolagem);
+atualizarProgressoRolagem();
+
+const elementosRevelar = document.querySelectorAll(".portfolio-revelar, [data-reveal]");
+
+if (elementosRevelar.length > 0 && !prefereMovimentoReduzido && "IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver((entradas, observer) => {
         entradas.forEach((entrada) => {
             if (entrada.isIntersecting) {
                 entrada.target.classList.add("portfolio-revelar-visivel");
@@ -65,9 +95,9 @@ if (portfolioElementos.length > 0 && !prefereMovimentoReduzido && "IntersectionO
         });
     }, { threshold: 0.15 });
 
-    portfolioElementos.forEach((elemento) => {
+    elementosRevelar.forEach((elemento) => {
         elemento.classList.add("portfolio-revelar-pendente");
-        portfolioObserver.observe(elemento);
+        revealObserver.observe(elemento);
     });
 }
 
