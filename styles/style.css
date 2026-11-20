@@ -208,23 +208,6 @@ header nav ul li a:focus-visible {
     font-weight: 600;
 }
 
-.tecnologias {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 28px;
-}
-
-.tecnologias span {
-    border: 1px solid rgba(16, 224, 2, 0.45);
-    border-radius: 999px;
-    padding: 8px 14px;
-    color: #10e002;
-    font-family: "Poppins", sans-serif;
-    font-size: 0.82rem;
-    font-weight: 500;
-}
-
 .resume {
     scroll-margin-top: 80px;
     padding: 104px 8% 112px;
@@ -1036,19 +1019,20 @@ header nav ul li a:focus-visible {
     border-color: rgba(16, 224, 2, 0.42);
 }
 
-.portfolio-tecnologias li span {
-    display: inline-grid;
+.portfolio-tecnologias li img {
+    display: block;
     width: 32px;
     height: 32px;
     flex: 0 0 32px;
-    place-items: center;
-    border: 1px solid rgba(16, 224, 2, 0.32);
-    border-radius: 9px;
-    background: rgba(16, 224, 2, 0.06);
-    color: #10e002;
-    font-family: "Sora", sans-serif;
-    font-size: 0.65rem;
-    font-weight: 700;
+    box-sizing: border-box;
+    padding: 3px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    object-fit: contain;
+}
+
+.portfolio-tecnologias li span {
+    min-width: 0;
 }
 
 .portfolio-evolucao {
