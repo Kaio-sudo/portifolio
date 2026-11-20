@@ -641,9 +641,6 @@ header nav ul li a:focus-visible {
     background: rgba(255, 255, 255, 0.28);
 }
 
-.portfolio-preview-conteudo,
-.portfolio-pudins-conteudo,
-.portfolio-bandeiras-conteudo,
 .portfolio-pessoal-conteudo,
 .portfolio-tarefas-conteudo {
     position: relative;
@@ -662,130 +659,11 @@ header nav ul li a:focus-visible {
     letter-spacing: 0.15em;
 }
 
-.portfolio-preview-python {
-    background: radial-gradient(ellipse at 50% 70%, rgba(16, 224, 2, 0.13), transparent 60%), #070b08;
-}
-
-.portfolio-python-simbolo {
-    display: grid;
-    width: 54px;
-    height: 54px;
-    margin: 9px 0;
-    place-items: center;
-    border: 1px solid rgba(16, 224, 2, 0.55);
-    border-radius: 16px;
-    background: rgba(16, 224, 2, 0.08);
-    box-shadow: 0 0 26px rgba(16, 224, 2, 0.1);
-    color: var(--accent-color);
-    font-family: "Sora", sans-serif;
-    font-size: 1.05rem;
-}
-
-.portfolio-preview-linhas {
-    display: grid;
-    width: 58%;
-    gap: 5px;
-}
-
-.portfolio-preview-linhas i {
-    height: 4px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.12);
-}
-
-.portfolio-preview-linhas i:nth-child(2) {
-    width: 78%;
-    justify-self: end;
-    background: rgba(16, 224, 2, 0.3);
-}
-
-.portfolio-preview-linhas i:nth-child(3) {
-    width: 88%;
-}
-
-.portfolio-preview-pudins {
-    background: radial-gradient(ellipse at 50% 85%, rgba(199, 125, 55, 0.19), transparent 65%), #100b08;
-}
-
-.portfolio-pudins-conteudo {
-    align-items: center;
-    overflow: hidden;
-    background: radial-gradient(ellipse at 50% 100%, rgba(230, 160, 83, 0.13), transparent 58%);
-}
-
-.portfolio-pudim {
-    position: absolute;
-    bottom: 13%;
-    left: 50%;
-    width: 72px;
-    height: 68px;
-    transform: translateX(-50%);
-    border: 1px solid rgba(255, 226, 179, 0.48);
-    border-radius: 24px 24px 15px 15px;
-    background: linear-gradient(180deg, #9f5929 0 20%, #f0c77e 21% 76%, #d89c51);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.38), inset 0 8px 12px rgba(255, 255, 255, 0.1);
-    clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%);
-}
-
-.portfolio-pudim-menor {
-    bottom: 12%;
-    left: calc(50% + 45px);
-    width: 45px;
-    height: 44px;
-    transform: translateX(0) scale(0.82);
-    opacity: 0.72;
-}
-
-.portfolio-pudins-linha {
-    position: absolute;
-    right: 12%;
-    bottom: 11%;
-    left: 12%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(240, 199, 126, 0.7), transparent);
-}
-
-.portfolio-preview-bandeiras {
-    background: radial-gradient(ellipse at 50% 55%, rgba(16, 224, 2, 0.1), transparent 54%), #080b0c;
-}
-
-.portfolio-bandeiras-conteudo {
-    gap: 9px;
-}
-
-.portfolio-globo {
-    display: grid;
-    width: 62px;
-    height: 62px;
-    place-items: center;
-    border: 1px solid rgba(16, 224, 2, 0.55);
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, rgba(16, 224, 2, 0.14), rgba(16, 224, 2, 0.025) 70%);
-    box-shadow: 0 0 26px rgba(16, 224, 2, 0.1);
-    color: #d7ffd3;
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: 1.7rem;
-}
-
-.portfolio-opcoes {
-    display: flex;
-    gap: 7px;
-}
-
-.portfolio-opcoes i {
-    width: 25px;
-    height: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    border-radius: 3px;
-    background: linear-gradient(180deg, #f3f3f3 0 33%, #d55445 34% 66%, #4f78a8 67%);
-}
-
-.portfolio-opcoes i:nth-child(2) {
-    background: linear-gradient(180deg, #f1d777 0 33%, #f3f3f3 34% 66%, #628764 67%);
-}
-
-.portfolio-opcoes i:nth-child(3) {
-    background: linear-gradient(180deg, #7197c4 0 33%, #f4f4f4 34% 66%, #cc6959 67%);
+.portfolio-preview-imagem {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .portfolio-preview-pessoal {
