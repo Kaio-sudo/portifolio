@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -27,7 +27,14 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#portfolio">Portifolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="navegacao-tema">
+                    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ativar modo claro"
+                        aria-pressed="false" title="Ativar modo claro">
+                        <span id="theme-toggle-icon" class="theme-toggle-icon" aria-hidden="true">☼</span>
+                        <span id="theme-toggle-label">Modo claro</span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -227,20 +234,17 @@
                             <ul class="portfolio-tags" aria-label="Tecnologias utilizadas">
                                 <li>Python</li>
                             </ul>
+                            <p class="portfolio-terminal-nota">
+                                Este projeto só pode ser visualizado no terminal.
+                            </p>
                             <div class="portfolio-acoes">
-                                <button class="portfolio-botao portfolio-botao-principal" type="button" disabled
-                                    title="Adicione o endereço de visualização do projeto"
-                                    aria-label="Visualizar projeto Quiz de conhecimentos em Python — link a adicionar"
-                                    data-link-placeholder="url-do-projeto">
-                                    Visualizar projeto
-                                </button>
-                                <button class="portfolio-botao portfolio-botao-github" type="button" disabled
-                                    title="Adicione o endereço do repositório no GitHub"
-                                    aria-label="Repositório GitHub do Quiz de conhecimentos em Python — link a adicionar"
-                                    data-link-placeholder="url-do-github">
+                                <a class="portfolio-botao portfolio-botao-github"
+                                    href="https://github.com/Kaio-sudo/quiz-de-conhecimentos-em-Python.git"
+                                    target="_blank" rel="noopener noreferrer"
+                                    aria-label="Abrir repositório GitHub do Quiz de conhecimentos em Python em uma nova guia">
                                     <img class="portfolio-github-logo" src="imgs/tecnologias/github-icon.png" alt=""
                                         loading="lazy"> GitHub
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </article>
@@ -454,6 +458,111 @@
                 <p>
                     Meu portfólio está em constante evolução. Novos projetos, experiências e aprendizados
                     serão adicionados ao longo da minha jornada na tecnologia.
+                </p>
+            </section>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact" aria-labelledby="contact-titulo">
+        <div class="contact-container">
+            <div class="contact-layout">
+                <div class="contact-informacoes">
+                    <div class="contact-cabecalho">
+                        <span class="contact-etiqueta"><span>05</span> Contato</span>
+                        <h2 id="contact-titulo">Vamos conversar?</h2>
+                        <p>
+                            Tem alguma oportunidade, projeto ou ideia interessante? Estou sempre aberto a novos
+                            desafios, conexões e oportunidades de aprendizado. Entre em contato comigo!
+                        </p>
+                    </div>
+
+                    <div class="contact-dados" aria-label="Informações de contato">
+                        <a class="contact-dado" href="mailto:kh0658027@gmail.com">
+                            <span class="contact-icone" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M3.5 6.5h17v11h-17z" />
+                                    <path d="m4 7 8 6 8-6" />
+                                </svg>
+                            </span>
+                            <span class="contact-dado-texto">
+                                <span class="contact-dado-titulo">E-mail</span>
+                                <span class="contact-dado-valor">kh0658027@gmail.com</span>
+                            </span>
+                        </a>
+                        <div class="contact-dado">
+                            <span class="contact-icone" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M19 10.2c0 5-7 10.3-7 10.3S5 15.2 5 10.2a7 7 0 1 1 14 0Z" />
+                                    <circle cx="12" cy="10" r="2.2" />
+                                </svg>
+                            </span>
+                            <span class="contact-dado-texto">
+                                <span class="contact-dado-titulo">Localização</span>
+                                <span class="contact-dado-valor">Ceilândia – Brasília, DF</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="contact-redes">
+                        <h3>Redes profissionais</h3>
+                        <div class="contact-redes-links">
+                            <a class="contact-rede" href="https://www.linkedin.com/in/kaio-soares-722716365/"
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="Abrir perfil de Kaio Soares no LinkedIn em uma nova guia">
+                                <img class="contact-rede-icone contact-linkedin-icone"
+                                    src="imgs/tecnologias/linkedin.png" alt="" loading="lazy">
+                                <span>LinkedIn</span>
+                            </a>
+                            <a class="contact-rede" href="https://github.com/Kaio-sudo" target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Abrir perfil de Kaio Soares no GitHub em uma nova guia">
+                                <img class="contact-github-icone" src="imgs/tecnologias/github-icon.png" alt=""
+                                    loading="lazy">
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="contact-form" novalidate aria-labelledby="contact-form-titulo">
+                    <span class="contact-form-etiqueta">Vamos tirar sua ideia do papel?</span>
+                    <h3 id="contact-form-titulo">Envie uma mensagem</h3>
+                    <p id="contact-form-instrucoes" class="contact-form-instrucoes">
+                        O formulário prepara a mensagem no seu aplicativo de e-mail. Você poderá revisar e enviar
+                        por lá; o site não confirma o envio.
+                    </p>
+
+                    <div class="contact-form-grade">
+                        <div class="contact-campo">
+                            <label for="contact-nome">Nome completo</label>
+                            <input id="contact-nome" name="nome" type="text" autocomplete="name" required>
+                        </div>
+                        <div class="contact-campo">
+                            <label for="contact-email">E-mail</label>
+                            <input id="contact-email" name="email" type="email" autocomplete="email" required>
+                        </div>
+                        <div class="contact-campo contact-campo-largo">
+                            <label for="contact-assunto">Assunto</label>
+                            <input id="contact-assunto" name="assunto" type="text" required>
+                        </div>
+                        <div class="contact-campo contact-campo-largo">
+                            <label for="contact-mensagem">Mensagem</label>
+                            <textarea id="contact-mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+                    </div>
+
+                    <button class="contact-enviar" type="submit">Enviar mensagem</button>
+                    <p id="contact-feedback" class="contact-feedback" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+
+            <section class="contact-oportunidades" aria-labelledby="contact-oportunidades-titulo">
+                <span class="contact-oportunidades-etiqueta">Disponibilidade profissional</span>
+                <h3 id="contact-oportunidades-titulo">Aberto a oportunidades!</h3>
+                <p>
+                    Estou em busca de oportunidades para desenvolver minhas habilidades na área de Tecnologia da
+                    Informação, adquirir experiência profissional e contribuir com novos projetos.
                 </p>
             </section>
         </div>

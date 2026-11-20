@@ -2,12 +2,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
 
+:root {
+    color-scheme: dark;
+    --accent-color: #10e002;
+    --page-background: #000;
+}
+
+html[data-theme="light"] {
+    color-scheme: light;
+    --accent-color: #137a0f;
+    --page-background: #f3f5f3;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: black;
+    background-color: var(--page-background);
     padding-top: 80px;
 }
 
@@ -40,7 +52,7 @@ header.scrolled {
 }
 
 header .name {
-    color: #10e002;
+    color: var(--accent-color);
     font-family: 'Bricolage Grotesque', sans-serif;
     padding: 10px;
     cursor: pointer;
@@ -89,7 +101,41 @@ header nav ul li a {
 
 header nav ul li a:hover,
 header nav ul li a:focus-visible {
-    color: #10e002;
+    color: var(--accent-color);
+}
+
+.theme-toggle {
+    display: inline-flex;
+    min-height: 36px;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 10px;
+    border: 1px solid rgba(16, 224, 2, 0.4);
+    border-radius: 999px;
+    background: rgba(16, 224, 2, 0.07);
+    color: #f4f4f4;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.76rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background-color 0.22s ease, border-color 0.22s ease, color 0.22s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    border-color: var(--accent-color);
+    background: rgba(16, 224, 2, 0.14);
+    outline: none;
+}
+
+.theme-toggle:focus-visible {
+    box-shadow: 0 0 0 3px rgba(16, 224, 2, 0.18);
+}
+
+.theme-toggle-icon {
+    font-size: 1rem;
+    line-height: 1;
 }
 
 .apresentacao {
@@ -164,7 +210,7 @@ header nav ul li a:focus-visible {
     height: 8px;
     flex: 0 0 8px;
     border-radius: 50%;
-    background: #10e002;
+    background: var(--accent-color);
     box-shadow: 0 0 12px rgba(16, 224, 2, 0.7);
     content: "";
 }
@@ -172,7 +218,7 @@ header nav ul li a:focus-visible {
 .apresentacao-etiqueta {
     display: inline-block;
     margin-bottom: 12px;
-    color: #10e002;
+    color: var(--accent-color);
     font-family: "Poppins", sans-serif;
     font-size: 0.85rem;
     font-weight: 600;
@@ -225,7 +271,7 @@ header nav ul li a:focus-visible {
 }
 
 .resume-etiqueta {
-    color: #10e002;
+    color: var(--accent-color);
     font-family: "Poppins", sans-serif;
     font-size: 0.78rem;
     font-weight: 600;
@@ -242,7 +288,7 @@ header nav ul li a:focus-visible {
 }
 
 .resume-cabecalho h2 span {
-    color: #10e002;
+    color: var(--accent-color);
 }
 
 .resume-cabecalho p,
@@ -282,7 +328,7 @@ header nav ul li a:focus-visible {
 }
 
 .resume-indice {
-    color: #10e002;
+    color: var(--accent-color);
     font-family: "Sora", sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
@@ -298,7 +344,7 @@ header nav ul li a:focus-visible {
 .resume-resumo {
     max-width: 850px;
     padding: 24px 28px;
-    border-left: 2px solid #10e002;
+    border-left: 2px solid var(--accent-color);
     border-radius: 0 14px 14px 0;
     background: rgba(255, 255, 255, 0.035);
 }
@@ -351,7 +397,7 @@ header nav ul li a:focus-visible {
     display: inline-flex;
     align-items: center;
     min-height: 26px;
-    color: #10e002;
+    color: var(--accent-color);
     font-family: "Poppins", sans-serif;
     font-size: 0.74rem;
     font-weight: 600;
@@ -363,7 +409,7 @@ header nav ul li a:focus-visible {
     height: 7px;
     margin-right: 8px;
     border-radius: 50%;
-    background: #10e002;
+    background: var(--accent-color);
     box-shadow: 0 0 10px rgba(16, 224, 2, 0.6);
     content: "";
 }
@@ -389,7 +435,7 @@ header nav ul li a:focus-visible {
 
 .resume-instituicao {
     margin: 0;
-    color: #10e002;
+    color: var(--accent-color);
     font-family: "Poppins", sans-serif;
     font-size: 0.88rem;
     font-weight: 500;
@@ -412,7 +458,7 @@ header nav ul li a:focus-visible {
     place-items: center;
     border: 1px solid rgba(16, 224, 2, 0.4);
     border-radius: 50%;
-    color: #10e002;
+    color: var(--accent-color);
     font-family: "Poppins", sans-serif;
 }
 
@@ -486,7 +532,7 @@ header nav ul li a:focus-visible {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    color: #10e002;
+    color: var(--accent-color);
     font-family: "Poppins", sans-serif;
     font-size: 0.78rem;
     font-weight: 600;
@@ -496,7 +542,7 @@ header nav ul li a:focus-visible {
 
 .portfolio-etiqueta span,
 .portfolio-indice {
-    color: #10e002;
+    color: var(--accent-color);
     font-family: "Sora", sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
@@ -511,7 +557,7 @@ header nav ul li a:focus-visible {
 }
 
 .portfolio-cabecalho h2 span {
-    color: #10e002;
+    color: var(--accent-color);
 }
 
 .portfolio-cabecalho p,
@@ -660,7 +706,7 @@ header nav ul li a:focus-visible {
     border-radius: 16px;
     background: rgba(16, 224, 2, 0.08);
     box-shadow: 0 0 26px rgba(16, 224, 2, 0.1);
-    color: #10e002;
+    color: var(--accent-color);
     font-family: "Sora", sans-serif;
     font-size: 1.05rem;
 }
@@ -832,7 +878,7 @@ header nav ul li a:focus-visible {
 }
 
 .portfolio-tarefa-concluida i {
-    background: #10e002;
+    background: var(--accent-color);
     box-shadow: 0 0 8px rgba(16, 224, 2, 0.45);
 }
 
@@ -863,7 +909,7 @@ header nav ul li a:focus-visible {
 }
 
 .portfolio-projeto-tipo {
-    color: #10e002;
+    color: var(--accent-color);
     font-family: "Poppins", sans-serif;
     font-size: 0.67rem;
     font-weight: 600;
@@ -912,6 +958,14 @@ header nav ul li a:focus-visible {
     color: #aeb2ae;
 }
 
+.portfolio-terminal-nota {
+    margin: 14px 0 0;
+    color: #aeb2ae;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.55;
+}
+
 .portfolio-acoes {
     display: flex;
     gap: 8px;
@@ -956,14 +1010,14 @@ header nav ul li a:focus-visible {
 }
 
 .portfolio-botao-principal:not(:disabled) {
-    background: #10e002;
+    background: var(--accent-color);
     color: #050805;
 }
 
 .portfolio-botao:not(:disabled):hover,
 .portfolio-botao:not(:disabled):focus-visible {
     transform: translateY(-2px);
-    border-color: #10e002;
+    border-color: var(--accent-color);
 }
 
 .portfolio-botao-principal:not(:disabled):hover,
@@ -974,7 +1028,7 @@ header nav ul li a:focus-visible {
 .portfolio-botao-github:not(:disabled):hover,
 .portfolio-botao-github:not(:disabled):focus-visible {
     background: rgba(16, 224, 2, 0.1);
-    color: #10e002;
+    color: var(--accent-color);
 }
 
 .portfolio-github-logo {
@@ -1040,7 +1094,7 @@ header nav ul li a:focus-visible {
 .portfolio-evolucao {
     margin-top: 72px;
     padding-left: 22px;
-    border-left: 2px solid #10e002;
+    border-left: 2px solid var(--accent-color);
 }
 
 .portfolio-evolucao .portfolio-titulo-bloco {
@@ -1061,6 +1115,363 @@ header nav ul li a:focus-visible {
 .portfolio-revelar-pendente.portfolio-revelar-visivel {
     opacity: 1;
     transform: translateY(0);
+}
+
+.contact {
+    scroll-margin-top: 80px;
+    padding: 104px 8% 72px;
+}
+
+.contact-container {
+    width: min(100%, 1120px);
+    margin: 0 auto;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: clamp(32px, 5vw, 64px);
+}
+
+.contact-informacoes {
+    min-width: 0;
+}
+
+.contact-cabecalho {
+    max-width: 560px;
+    margin-bottom: 32px;
+}
+
+.contact-etiqueta,
+.contact-oportunidades-etiqueta,
+.contact-form-etiqueta {
+    color: var(--accent-color);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contact-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-etiqueta span {
+    font-family: "Sora", sans-serif;
+    font-size: 0.8rem;
+}
+
+.contact-cabecalho h2 {
+    margin: 14px 0 16px;
+    color: #fff;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.05;
+}
+
+.contact-cabecalho p {
+    margin: 0;
+    color: #b8b8b8;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.85;
+}
+
+.contact-dados {
+    display: grid;
+    gap: 10px;
+}
+
+.contact-dado {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 14px;
+    box-sizing: border-box;
+    padding: 15px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.025);
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.24s ease, transform 0.24s ease, background-color 0.24s ease;
+}
+
+a.contact-dado:hover,
+a.contact-dado:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(16, 224, 2, 0.46);
+    background: rgba(16, 224, 2, 0.035);
+}
+
+a.contact-dado:focus-visible,
+.contact-rede:focus-visible,
+.contact-enviar:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+.contact-icone {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    place-items: center;
+    border: 1px solid rgba(16, 224, 2, 0.28);
+    border-radius: 11px;
+    background: rgba(16, 224, 2, 0.07);
+    color: var(--accent-color);
+}
+
+.contact-icone svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.6;
+}
+
+.contact-dado-texto {
+    display: grid;
+    min-width: 0;
+    gap: 3px;
+}
+
+.contact-dado-titulo {
+    color: #a7aaa7;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.72rem;
+}
+
+.contact-dado-valor {
+    overflow-wrap: anywhere;
+    color: #f0f0f0;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.86rem;
+    font-weight: 500;
+}
+
+.contact-redes {
+    margin-top: 30px;
+}
+
+.contact-redes h3 {
+    margin: 0 0 12px;
+    color: #e8e8e8;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.12rem;
+}
+
+.contact-redes-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.contact-rede {
+    display: flex;
+    min-width: 0;
+    min-height: 50px;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.025);
+    color: #e7e7e7;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.82rem;
+    text-decoration: none;
+    transition: border-color 0.24s ease, transform 0.24s ease, color 0.24s ease;
+}
+
+.contact-rede:hover {
+    transform: translateY(-2px);
+    border-color: rgba(16, 224, 2, 0.42);
+    color: var(--accent-color);
+}
+
+.contact-rede-icone,
+.contact-github-icone {
+    display: grid;
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+    place-items: center;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+
+.contact-linkedin-icone {
+    padding: 3px;
+    background: #f5f5f5;
+    object-fit: contain;
+}
+
+.contact-github-icone {
+    padding: 3px;
+    background: #f5f5f5;
+    object-fit: contain;
+}
+
+.contact-form {
+    min-width: 0;
+    box-sizing: border-box;
+    padding: clamp(22px, 3vw, 34px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018));
+}
+
+.contact-form h3 {
+    margin: 10px 0 8px;
+    color: #f5f5f5;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(1.45rem, 3vw, 1.9rem);
+}
+
+.contact-form-instrucoes {
+    margin: 0 0 22px;
+    color: #a7aaa7;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+.contact-form-grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.contact-campo {
+    display: grid;
+    min-width: 0;
+    gap: 7px;
+}
+
+.contact-campo-largo {
+    grid-column: 1 / -1;
+}
+
+.contact-campo label {
+    color: #e2e2e2;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.contact-campo input,
+.contact-campo textarea {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 12px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 9px;
+    background: rgba(0, 0, 0, 0.46);
+    color: #f5f5f5;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.86rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-campo input {
+    min-height: 46px;
+}
+
+.contact-campo textarea {
+    min-height: 136px;
+    resize: vertical;
+}
+
+.contact-campo input::placeholder,
+.contact-campo textarea::placeholder {
+    color: #777d77;
+}
+
+.contact-campo input:focus,
+.contact-campo textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(16, 224, 2, 0.12);
+}
+
+.contact-campo input[aria-invalid="true"],
+.contact-campo textarea[aria-invalid="true"] {
+    border-color: #df706a;
+}
+
+.contact-enviar {
+    display: inline-flex;
+    width: 100%;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    padding: 11px 18px;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    background: var(--accent-color);
+    color: #050805;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: transform 0.22s ease, background-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.contact-enviar:hover {
+    transform: translateY(-2px);
+    background: #19f20b;
+    box-shadow: 0 8px 24px rgba(16, 224, 2, 0.16);
+}
+
+.contact-feedback {
+    min-height: 1.5em;
+    margin: 12px 0 0;
+    color: #b8b8b8;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.6;
+}
+
+.contact-feedback[data-estado="erro"] {
+    color: #f08a84;
+}
+
+.contact-feedback[data-estado="info"] {
+    color: #a9ed9f;
+}
+
+.contact-oportunidades {
+    margin-top: 72px;
+    padding: 24px 28px;
+    border-left: 2px solid var(--accent-color);
+    border-radius: 0 14px 14px 0;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.contact-oportunidades h3 {
+    margin: 8px 0 9px;
+    color: #f5f5f5;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+}
+
+.contact-oportunidades p {
+    max-width: 880px;
+    margin: 0;
+    color: #b8b8b8;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.8;
 }
 
 @media (max-width: 900px) {
@@ -1094,6 +1505,11 @@ header nav ul li a:focus-visible {
 
     .portfolio-tecnologias {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
     }
 }
 
@@ -1162,6 +1578,15 @@ header nav ul li a:focus-visible {
     .portfolio-bloco {
         margin-top: 48px;
     }
+
+    .contact {
+        padding: 76px 24px 64px;
+    }
+
+    .contact-oportunidades {
+        margin-top: 48px;
+        padding: 21px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1198,6 +1623,12 @@ header nav ul li a:focus-visible {
         font-size: 0.76rem;
     }
 
+    .theme-toggle {
+        gap: 5px;
+        padding: 6px 8px;
+        font-size: 0.7rem;
+    }
+
     .portfolio-grade {
         grid-template-columns: 1fr;
     }
@@ -1224,6 +1655,25 @@ header nav ul li a:focus-visible {
     .portfolio-botao {
         font-size: 0.66rem;
     }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form-grade {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .contact-campo-largo {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 380px) {
+    #theme-toggle-label {
+        display: none;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1244,7 +1694,16 @@ header nav ul li a:focus-visible {
     .resume-habilidade,
     .portfolio-projeto,
     .portfolio-tecnologias li,
-    .portfolio-botao {
+    .portfolio-botao,
+    .contact-dado,
+    .contact-rede,
+    .contact-enviar,
+    .contact-campo input,
+    .contact-campo textarea {
+        transition: none;
+    }
+
+    .theme-toggle {
         transition: none;
     }
 
@@ -1252,4 +1711,143 @@ header nav ul li a:focus-visible {
         opacity: 1;
         transform: none;
     }
+}
+
+html[data-theme="light"] header {
+    background: rgba(243, 245, 243, 0.96);
+}
+
+html[data-theme="light"] header.scrolled {
+    background: rgba(255, 255, 255, 0.84);
+    border-bottom-color: rgba(30, 45, 30, 0.1);
+    box-shadow: 0 10px 30px rgba(20, 35, 20, 0.1);
+}
+
+html[data-theme="light"] header nav ul li a,
+html[data-theme="light"] .theme-toggle {
+    color: #202820;
+}
+
+html[data-theme="light"] .theme-toggle {
+    border-color: rgba(19, 122, 15, 0.35);
+    background: rgba(19, 122, 15, 0.06);
+}
+
+html[data-theme="light"] .theme-toggle:hover,
+html[data-theme="light"] .theme-toggle:focus-visible {
+    border-color: var(--accent-color);
+    background: rgba(19, 122, 15, 0.12);
+}
+
+html[data-theme="light"] body {
+    color: #263126;
+}
+
+html[data-theme="light"] .apresentacao h2,
+html[data-theme="light"] .resume-cabecalho h2,
+html[data-theme="light"] .resume-titulo-bloco h3,
+html[data-theme="light"] .resume-card h4,
+html[data-theme="light"] .resume-habilidade h4,
+html[data-theme="light"] .portfolio-cabecalho h2,
+html[data-theme="light"] .portfolio-titulo-bloco h3,
+html[data-theme="light"] .portfolio-projeto-corpo h4,
+html[data-theme="light"] .contact-cabecalho h2,
+html[data-theme="light"] .contact-redes h3,
+html[data-theme="light"] .contact-form h3,
+html[data-theme="light"] .contact-oportunidades h3 {
+    color: #202820;
+}
+
+html[data-theme="light"] .apresentacao p,
+html[data-theme="light"] .resume-cabecalho p,
+html[data-theme="light"] .resume-detalhe,
+html[data-theme="light"] .resume-resumo p,
+html[data-theme="light"] .portfolio-cabecalho p,
+html[data-theme="light"] .portfolio-evolucao p,
+html[data-theme="light"] .portfolio-projeto-corpo p,
+html[data-theme="light"] .portfolio-terminal-nota,
+html[data-theme="light"] .portfolio-links-nota,
+html[data-theme="light"] .contact-cabecalho p,
+html[data-theme="light"] .contact-oportunidades p,
+html[data-theme="light"] .contact-form-instrucoes,
+html[data-theme="light"] .contact-feedback {
+    color: #515c51;
+}
+
+html[data-theme="light"] .apresentacao-destaque,
+html[data-theme="light"] .apresentacao p strong,
+html[data-theme="light"] .resume-resumo strong {
+    color: #263126 !important;
+}
+
+html[data-theme="light"] .resume-resumo,
+html[data-theme="light"] .resume-card,
+html[data-theme="light"] .resume-habilidade,
+html[data-theme="light"] .portfolio-projeto,
+html[data-theme="light"] .portfolio-tecnologias li,
+html[data-theme="light"] .contact-dado,
+html[data-theme="light"] .contact-rede,
+html[data-theme="light"] .contact-form,
+html[data-theme="light"] .contact-oportunidades {
+    border-color: #dce4dc;
+    background: #fff;
+}
+
+html[data-theme="light"] .resume-card-futuro {
+    border-style: dashed;
+    background: #f8faf8;
+}
+
+html[data-theme="light"] .resume-status-concluido,
+html[data-theme="light"] .resume-habilidade li,
+html[data-theme="light"] .portfolio-tecnologias li,
+html[data-theme="light"] .contact-dado-titulo,
+html[data-theme="light"] .contact-dado-valor,
+html[data-theme="light"] .contact-rede {
+    color: #344034;
+}
+
+html[data-theme="light"] .portfolio-tags li {
+    background: #f0f7ef;
+    color: #315a2e;
+}
+
+html[data-theme="light"] .portfolio-tags .portfolio-tag-pendente {
+    border-color: #c7d0c7;
+    color: #606b60;
+}
+
+html[data-theme="light"] .portfolio-botao-github {
+    background: #f8faf8;
+    color: #303a30;
+}
+
+html[data-theme="light"] .portfolio-botao-principal:not(:disabled),
+html[data-theme="light"] .contact-enviar {
+    color: #fff;
+}
+
+html[data-theme="light"] .portfolio-botao-principal:not(:disabled):hover,
+html[data-theme="light"] .contact-enviar:hover {
+    background: #0e670b;
+}
+
+html[data-theme="light"] .contact-campo label {
+    color: #344034;
+}
+
+html[data-theme="light"] .contact-campo input,
+html[data-theme="light"] .contact-campo textarea {
+    border-color: #cbd5cb;
+    background: #fbfcfb;
+    color: #202820;
+}
+
+html[data-theme="light"] .contact-campo input::placeholder,
+html[data-theme="light"] .contact-campo textarea::placeholder {
+    color: #737e73;
+}
+
+html[data-theme="light"] .contact-feedback[data-estado="info"] {
+    color: #315a2e;
 }
